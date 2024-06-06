@@ -1,0 +1,5 @@
+{
+  "name": "dns-client-ts-starter",
+  "packageManager": "yarn@4.2.2",
+  "private": true
+}
