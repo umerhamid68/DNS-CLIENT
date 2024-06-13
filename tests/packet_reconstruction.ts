@@ -30,7 +30,7 @@ import * as dgram from 'dgram';
 
 function sendDNSPacket(packet: Buffer) {
     const client = dgram.createSocket('udp4');
-    const server = '8.8.8.8'; // Google DNS server
+    const server = '8.8.8.8'; 
     const port = 53;
 
     client.send(packet, port, server, (err) => {
