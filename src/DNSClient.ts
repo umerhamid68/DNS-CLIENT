@@ -19,6 +19,9 @@ class DNSClient {
             console.error('Invalid record type provided.');
             return;
         }
+        if ((mappedRecordType === 'A' || mappedRecordType === 'AAAA') && userInput.domain.startsWith('www.')) {
+            userInput.domain = userInput.domain.substring(4);
+        }
 
         const transactionID = Math.floor(Math.random() * 65535);
         const packet = PacketGenerator.createPacket(userInput.domain, mappedRecordType, transactionID);
