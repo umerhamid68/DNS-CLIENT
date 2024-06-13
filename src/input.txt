@@ -1,0 +1,8 @@
+www.google.com A
+flex.nu.edu.pk A
+www.abc.com CNAME
+carbonteq.com A
+google.com AAAA
+goof AAAA
+y.com ur
+lms.lums.edu.pk A

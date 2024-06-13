@@ -1,0 +1,7 @@
+Index: 0, Transaction ID: 49, RDATA: 142.251.42.100
+Index: 1, Transaction ID: 56535, RDATA: 115.186.60.84
+Index: 2, Transaction ID: 48361, RDATA: d2iwv1xxkqpmiz.cloudfront.net
+Index: 3, Transaction ID: 13777, RDATA: 99.83.190.102, 75.2.70.75
+Index: 4, Transaction ID: 1439, RDATA: 2404:6800:4009:803:0:0:0:200e
+Index: 5, Transaction ID: 22654, RDATA: 
+Index: 6, Transaction ID: 5700, RDATA: 111.68.103.167, 110.93.234.187, 203.135.62.125
