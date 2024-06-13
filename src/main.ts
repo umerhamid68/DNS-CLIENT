@@ -28,7 +28,7 @@ import { OutputLayer } from './OutputLayer';
 const outputFilePath = 'output.txt';
 const communication = new Communication();
 const persistence = new Persistence();
-const outputLayer = new OutputLayer(outputpath);
+const outputLayer = new OutputLayer(outputFilePath);
 const dnsClient = new DNSClient(communication, persistence);
 
 communication.initSockets();
