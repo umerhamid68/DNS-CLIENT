@@ -9,6 +9,7 @@ import { FileOutput } from './FileOutput';
 import { Fli } from './Fli';
 const communication = new Communication();
 const persistence = new Persistence();
+<<<<<<< Updated upstream
 const console = new ConsoleOutput();
 const F_out = new FileOutput('output.txt');
 //const outputLayer = new OutputLayer(F_out);
@@ -19,6 +20,19 @@ dnsClient.start(communication, persistence);
 
 communication.run(Buffer.alloc(0), persistence, outputLayer, dnsClient)
 
+=======
+const console_ = new ConsoleOutput();
+const F_out = new FileOutput('output.txt');
+//const outputLayer = new OutputLayer(F_out);
+const outputLayer = new OutputLayer(console_);
+const dnsClient = new DNSClient();
+const responseHandler = (msg: Buffer) => handleResponse(msg, persistence, outputLayer, dnsClient);
+const errorHandler = (err: Error) => console.error('Communication error:', err);
+dnsClient.start(communication, persistence);
+
+//communication.run(Buffer.alloc(0), persistence, outputLayer, dnsClient)  //maybe we can take handler input
+communication.run(responseHandler, errorHandler);
+>>>>>>> Stashed changes
 const cli = new CLI(dnsClient);
 cli.run();
 /*const fli = new Fli('input.txt',dnsClient);
