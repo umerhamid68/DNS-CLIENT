@@ -1,0 +1,9 @@
+www.facebook.com A
+www.facebook.com CNAME
+flex.nu.edu.pk A
+www.abc.com CNAME
+carbonteq.com A
+google.com AAAA
+goof AAAA
+y.com ur
+lms.lums.edu.pk A
