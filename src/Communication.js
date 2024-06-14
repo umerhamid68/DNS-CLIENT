@@ -133,7 +133,10 @@ export { Communication };*/
 var dgram = require("dgram");
 var net = require("net");
 var events_1 = require("events");
+<<<<<<< Updated upstream
 var ResponseGenerator_1 = require("./ResponseGenerator");
+=======
+>>>>>>> Stashed changes
 var Communication = /** @class */ (function (_super) {
     __extends(Communication, _super);
     function Communication() {
@@ -157,8 +160,19 @@ var Communication = /** @class */ (function (_super) {
         });
         this.udpSocket.bind(0);
     };
+<<<<<<< Updated upstream
     Communication.prototype.run = function (msg, persistence, outputLayer, dnsClient) {
         this.initComm(function (msg) { return (0, ResponseGenerator_1.handleResponse)(msg, persistence, outputLayer, dnsClient); }, function (err) { return console.error('Communication error:', err); });
+=======
+    /*run(msg: Buffer, persistence: PersistenceInterface, outputLayer: OutputLayer, dnsClient: DNSClient) {
+        this.initComm(
+            (msg: Buffer) => handleResponse(msg, persistence, outputLayer, dnsClient),
+            (err: Error) => console.error('Communication error:', err)
+        );
+    }*/
+    Communication.prototype.run = function (handleResponse, handleError) {
+        this.initComm(handleResponse, handleError);
+>>>>>>> Stashed changes
     };
     Communication.prototype.send = function (packet) {
         if (packet.length > 512) {

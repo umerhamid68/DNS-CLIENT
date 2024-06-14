@@ -77,7 +77,11 @@ import { BufferWrapper } from './BufferWrapper';
 
 class HeaderEncoder {
     static createHeader(transactionID: number, QDCOUNT: number): Buffer {
+<<<<<<< Updated upstream
         const bufferWrapper = new BufferWrapper(12);
+=======
+        const bufferWrapper = new BufferWrapper(12); //bytes
+>>>>>>> Stashed changes
         bufferWrapper.writeUInt16BE(transactionID); // transactionID
         bufferWrapper.writeUInt16BE(0x0100); // flags 
         bufferWrapper.writeUInt16BE(QDCOUNT); // QDCOUNT

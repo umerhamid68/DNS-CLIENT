@@ -235,6 +235,13 @@ var AnswerDecoder = /** @class */ (function () {
     };
     AnswerDecoder.extractParsedRdata = function (packet) {
         //console.log('In answer decoder rdata extractor', packet);
+<<<<<<< Updated upstream
+=======
+        /*the benefit of this that i thought was right was that it was avoiding checking and
+         i did not have to fix what function to call based on what output
+         may be beneficial in case of multiple responses that may have different types
+         as in cname along with the ip address*/
+>>>>>>> Stashed changes
         var aAnswers = packet.answers.filter(function (ans) { return ans.type === RecordClasses_1.RecordT.A; });
         var aaaaAnswers = packet.answers.filter(function (ans) { return ans.type === RecordClasses_1.RecordT.AAAA; });
         var cnameAnswers = packet.answers.filter(function (ans) { return ans.type === RecordClasses_1.RecordT.CNAME; });

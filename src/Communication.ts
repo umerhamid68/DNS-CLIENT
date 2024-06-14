@@ -169,11 +169,21 @@ class Communication extends EventEmitter implements CommunicationInterface {
         this.udpSocket.bind(0);
     }
 
+<<<<<<< Updated upstream
     run(msg: Buffer, persistence: PersistenceInterface, outputLayer: OutputLayer, dnsClient: DNSClient) {
+=======
+    /*run(msg: Buffer, persistence: PersistenceInterface, outputLayer: OutputLayer, dnsClient: DNSClient) {
+>>>>>>> Stashed changes
         this.initComm(
             (msg: Buffer) => handleResponse(msg, persistence, outputLayer, dnsClient),
             (err: Error) => console.error('Communication error:', err)
         );
+<<<<<<< Updated upstream
+=======
+    }*/
+    run(handleResponse: (msg: Buffer) => void, handleError: (err: Error) => void) {
+        this.initComm(handleResponse, handleError);
+>>>>>>> Stashed changes
     }
 
     send(packet: Buffer) {
